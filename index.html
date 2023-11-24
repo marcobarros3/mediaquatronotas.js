@@ -14,7 +14,9 @@
 <body>
     <h1> MEDIA DE QUATRO NOTAS</h1>
 
-            <script>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        
         let n1  = parseFloat(prompt("primeiro número: somente números entre 0 e 10"));
         let n2  = parseFloat(prompt("segundo número: somente números entre 0 e 10"));
         let n3  = parseFloat(prompt("terceiro número: somente números entre 0 e 10"));
@@ -31,17 +33,18 @@
 
         if 
            
-        (media < 5) console.log("reprovado");
+        (media < 5){ document.getElementById("situacao").textContent="Reprovado";}
            
         else
             
         if
-           (media > 6) console.log("aprovado");
+           (media > 6){ document.getElementById("situacao").textContent="Aprovado";}
           
-         else console.log("em recuperação");
-           
-         
+         else { document.getElementById("situacao").textContent="Em Recuperação";}
+                })
        </script>
+
+       <p id="situacao"></p>
 
     
 </html>
